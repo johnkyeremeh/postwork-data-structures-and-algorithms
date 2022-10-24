@@ -2,13 +2,14 @@ function findShortestString(arr) {
 
   let shortest = arr[0]
 
-  for (i = 0; i < arr.length - 1;  i++){
-    if (arr[i].length < shortest.length){
-      shortest  = arr[i];
-    }
+  for (let i = 0; i < arr.length ; i++){
+      if (arr[i].length < shortest.length){
+        shortest = arr[i]
+      }
   }
-  console.log("output array", arr)
-  return arr[0]
+
+  return shortest
+}
 
   /*
 
@@ -31,7 +32,7 @@ function findShortestString(arr) {
 
 
   */
-}
+
 
 
 
