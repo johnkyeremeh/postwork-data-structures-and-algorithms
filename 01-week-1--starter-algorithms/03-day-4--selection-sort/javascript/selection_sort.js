@@ -1,29 +1,34 @@
 function selectionSort(arr) {
-  // type your code here
 
-  //[10, 4, 3, 2, 1, 5]
-  console.log("original value", arr)
-  for (i = 0; i < arr.length - 1; i++){
-    let minIndex = i
-    for (j = i + 1; j < arr.length; j++){
-      if (arr[j] < arr[minIndex]){      
-          minIndex = j            
+  for (let i = 0 ; i < arr.length ; i++){
+    let min = i 
+    for (let j = i+1 ; j < arr.length ; j++){
+      if (arr[j] < arr[min]){
+        min = j
       }
     }
-    let temp = arr[i]             
-    arr[i] = arr[minIndex]        
-    arr[minIndex] = temp 
+
+    let temp = arr[i]
+    arr[i] = arr[min]
+    arr[min] = temp
   }
 
-  console.log("updated", arr)
-  return arr
 
+  return arr
 }
+
+//loop thrugh each variable with 
+// loop through eac i + 1 with j
+// if arr[j] < arr[min] then min = j   4 > 10 = true 
+    //switch arr[i] with min           min = 1
+      //init a temp variable equal to arr[i]    temp  = arr[0] = 10 
+      //arr[i] = arr[min]                        arr[0] = 4
+      //arr[min] = temp                        arr[1] =  10
 
 if (require.main === module) {
   // add your own tests in here
   console.log("Expecting: [-1, 2, 3, 5]");
-  console.log("=>", selectionSort([10, 4, 3, 2, 1, 5]));
+  console.log("=>", selectionSort([3, -1, 5, 2]));
 
   console.log("");
 

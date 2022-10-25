@@ -1,15 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
 function reverseString(str) {
   // type your code here
 

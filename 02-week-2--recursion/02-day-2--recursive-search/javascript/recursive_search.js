@@ -1,6 +1,19 @@
 function recursiveSearch(arr, target) {
-  // type your code here
+ 
+  if (arr.length === 0){
+    return false 
+  }
+ 
+
+  if (arr[0] === target){
+    return true 
+  }
+
+
+  return recursiveSearch(arr.slice(1), target)
+
 }
+
 
 if (require.main === module) {
   // add your own tests in here
@@ -17,3 +30,9 @@ module.exports = recursiveSearch;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+
+// break condition is if arr[i] is equal to target
+
+// iterate through each value of array i
+  //check if each value is equal to array

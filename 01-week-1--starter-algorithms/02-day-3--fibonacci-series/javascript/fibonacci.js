@@ -1,23 +1,14 @@
 function fibonacci(num) {
   // type your code here
 
-  // 0,1,1,2,3
-  //2
-  //fib[2] = 1
-  //fib[4] = 3
-  if (num <=1){
-    return num;
+  if (num < 2){
+    return num
   }
-  
-  const fib = [0, 1]
 
-  for (let i = 2; i <= num; i++){
-    fib[i] = fib[i - 2] + fib[i - 1]
-  }
-  //return the index of last digit of fib
-  return fib[fib.length - 1]
-
+  return fibonacci(num - 1) + fibonacci(num - 2)
 }
+
+ 
 
 if (require.main === module) {
   // add your own tests in here
