@@ -1,20 +1,50 @@
-function findFirstDuplicate(arr) {
 
-
+function findFirstDuplicate(arr){
+    
     let unique = []
 
-    for(let i = 0; i < arr.length ; i++){
-        if (unique.includes(arr[i])){
+    for (i = 0; i < arr.length ; i++){
+        if (unique.includes(arr[i])) {
             return arr[i]
-        } 
-            unique.push(arr[i])
+        } else {
+            unique.unshift(arr[i])
+        }
+    }
+}
+
+
+// console.log(findFirstDuplicate([1,2,3,4,4]))
+
+//iterate through each element 
+
+    //if element is not in array then add to arr
+    // if element is in arr return arr 
+
+
+
+
+
+
+
+
+
+// function findFirstDuplicate(arr) {
+
+
+//     let unique = []
+
+//     for(let i = 0; i < arr.length ; i++){
+//         if (unique.includes(arr[i])){
+//             return arr[i]
+//         } 
+//             unique.push(arr[i])
     
        
-    }
+//     }
 
-    return -1 
+//     return -1 
 
-}
+// }
 
 console.log(findFirstDuplicate([1,2,3,4,4]))
 

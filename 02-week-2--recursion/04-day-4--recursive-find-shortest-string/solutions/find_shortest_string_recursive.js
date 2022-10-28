@@ -1,10 +1,13 @@
 function findShortestStringRecursive(arr) {
+
+  console.log("tes t result")
   if (arr.length === 1) {
     return arr[0];
   }
 
+  console.log("tes t result")
   const result = findShortestStringRecursive(arr.slice(1));
-
+  console.log("after esult")
   return arr[0].length <= result.length ? arr[0] : result;
 }
 

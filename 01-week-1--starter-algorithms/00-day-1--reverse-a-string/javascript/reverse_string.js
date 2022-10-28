@@ -1,15 +1,24 @@
 
+//Method 1
+// function reverseString(str) {
+//   // type your code here
+//   let sorted = ""
+//   for (let i = 0; i < str.length ; i++){
+//     sorted = str[i] + sorted
+//   }
 
-function reverseString(str) {
-  // type your code here
+//   return sorted
+// }
 
-  let reversedString = ""
+//method 2 
+function reverseString(str){
 
-  for (let i = 0; i < str.length; i++){
-    reversedString = str[i] + reversedString
+  let reverse = ""
+  for (i = str.length - 1; i >= 0 ; i--){
+    reverse += str[i]
   }
 
-  return reversedString
+  return reverse
 }
 
 if (require.main === module) {
@@ -24,19 +33,4 @@ if (require.main === module) {
 }
 
 module.exports = reverseString;
-
-// Please add your pseudocode to this file
-// And a written explanation of your solution
-
-
-//Input     Output
-//-----------------
-// hi          ih
-// john        nhoj
-
-
-// create a var called new_word
-// Iterate each char in the given string 
-    //for each character move to new_word
-
 

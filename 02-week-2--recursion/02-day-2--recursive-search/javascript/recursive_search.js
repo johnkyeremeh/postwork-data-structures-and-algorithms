@@ -1,17 +1,13 @@
 function recursiveSearch(arr, target) {
- 
-  if (arr.length === 0){
-    return false 
-  }
- 
 
+  if (arr.length === 0) {
+    return false
+  }
   if (arr[0] === target){
-    return true 
+    return true ;
   }
-
 
   return recursiveSearch(arr.slice(1), target)
-
 }
 
 

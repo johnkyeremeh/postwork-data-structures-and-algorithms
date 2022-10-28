@@ -1,18 +1,20 @@
 function selectionSortRecursive(arr) {
   // type your code here
-
   if (arr.length === 0){
     return []
   }
 
-  const min = Math.min(...arr)          //-1, 2, 3,5
-  const idx = arr.indexOf(min)          // 1, 2, 0 ,0
-  arr.splice(idx, 1)                    //[3,5,2]  [3,5], [5], []
+  const min = Math.min(...arr)
+  console.log("min", min)
+  const idx = arr.indexOf(min)
+  console.log("idx", idx)
+  arr.splice(idx, 1)
+  const result = selectionSortRecursive(arr);
 
-  const result =  selectionSortRecursive(arr)  //selection([3,5,2]) => selection[3,5] => selection[5] => selection[5]
-  result.unshift(min)
-  return result 
+  console.log("result", result)
 
+  result.unshift(min);
+  return result;
 
 
 
@@ -21,14 +23,6 @@ function selectionSortRecursive(arr) {
 }
 
 
-/*
-Find Min value of array => -1 
-Add min value to front of array 
-
-Recursve through each element
-
-
-*/
 
 if (require.main === module) {
   // add your own tests in here
